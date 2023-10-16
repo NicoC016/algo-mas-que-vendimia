@@ -1,0 +1,54 @@
+<div class="sizeNote" *ngFor="let noteID of note">
+    <span class="dateAndBrand">
+        <span>
+            {{noteID.brandLabel}}
+        </span>
+        <span class="space"></span>
+        <span>
+            {{noteID.date}}
+        </span>
+    </span>
+    <div>
+        <h1 class="text-center">{{noteID.title}}</h1>
+        <hr>
+        <h5>{{noteID.subtitle}}</h5>
+    </div>
+    <section>
+        <div class="container">
+            <img [src]="noteID.image" alt="">
+            <section>{{noteID.item}}</section>
+            <ckeditor [editor]="Editor" data={{noteID.body}}></ckeditor>
+        </div>
+    </section>
+    <br>
+    <div *ngIf="auth.isAuthenticated$ | async">
+        <button (click)="editNote(noteID.id)" class="btn btn-outline-secondary" style="margin-right:9px;">
+          <i class="fa-sharp fa-solid fa-pen"></i>
+        </button>
+        <!-- Button trigger modal -->
+        <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-danger">
+          <i class="fa-sharp fa-solid fa-trash"></i>
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <b>¿Deseas eliminar la nota seleccionada?</b>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" (click)="deleteNote(noteID.id)" class="btn btn-primary">Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+

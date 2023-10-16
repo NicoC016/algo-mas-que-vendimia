@@ -1,0 +1,72 @@
+<div>
+  <h1 class="text-center">Nueva nota</h1>
+</div>
+<hr>
+<div class="sizeNote">
+  <form action="" [formGroup]="form" (ngSubmit)="submitData()">
+    <span class="dateAndBrand">
+      <div>
+        <select class="form-select" formControlName="brandLabel">
+          <option value='' selected disabled>Seleccionar</option>
+          <option value="Maipú">Maipú</option>
+          <option value="Guaymallén">Guaymallén</option>
+          <option value="Godoy Cruz">Godoy Cruz</option>
+          <option value="Luján">Lujan</option>
+          <option value="Capital">Capital</option>
+          <option value="Las Heras">Las Heras</option>
+          <option value="Lavalle">Lavalle</option>
+          <option value="Junín">Junín</option>
+          <option value="La Paz">La Paz</option>
+          <option value="Rivadavia">Rivadavia</option>
+          <option value="Santa Rosa">Santa Rosa</option>
+          <option value="San Martín">San Martín</option>
+          <option value="San Carlos">San Carlos</option>
+          <option value="Tunuyán">Tunuyán</option>
+          <option value="Tupungato">Tupungato</option>
+          <option value="General Alvear">General Alvear</option>
+          <option value="Malargüe">Malargüe</option>
+          <option value="San Rafael">San Rafael</option>
+        </select>
+      </div>
+      <span class="space"></span>
+      <span>
+        <input type="date" class="inputs form-control " id="date" placeholder="Insertar fecha" formControlName="date"
+          required>
+      </span>
+    </span>
+    <div>
+      <label for="title" class="form-label">Titulo</label>
+      <input type="text" class="form-control text-center" style="font-size: 28px;" placeholder="Insertar un titulo"
+        formControlName="title" required>
+      <hr>
+      <label for="subtitle" class="form-label">Subtitulo</label>
+      <input type="text" class="form-control" id="subtitle" placeholder="Insertar subtitulo" formControlName="subtitle"
+        required>
+    </div>
+    <br>
+    <label for="image" class="form-label">Url de la imagen</label>
+    <input type="text" class="generalStyle form-control" aria-label="file example" formControlName="image"
+      placeholder="insertar url de la imagen">
+    <label for="item" class="form-label">Epígrafe</label>
+    <input type="text" class="generalStyle form-control" aria-label="file example" placeholder="Insertar epígrafe"
+      formControlName="item">
+    <label for="body" class="form-label">Cuerpo</label>
+    <!-- <textarea class="form-control generalStyle" id="body" placeholder="Insertar cuerpo" formControlName="body" required>
+    </textarea> -->
+    <ckeditor [editor]="Editor" tagName="textarea" formControlName="body"></ckeditor>
+    <br>
+    <div class="checkbox-form mb-4">
+      <span class="checkbox-important">
+        <input type="checkbox" class="form-check-input" id="checkbox-imp" formControlName="important">
+        <label class="form-check-label" for="checkbox-imp">Importante</label>
+      </span>
+      <span>
+        <input type="checkbox" class="form-check-input" id="checkbox-veryImportant" formControlName="veryImportant">
+        <label class="form-check-label" for="checkbox-veryImportant">Ultima hora</label>
+      </span>
+    </div>
+    <div>
+      <button class="btn" type="submit">Crear nota</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,34 @@
+<main class="container" *ngFor="let notes of result">
+  <div *ngIf="notes.isVeryImportant">
+    <div class="p-4 p-md-8 mb-4 text-white rounded bg-dark" [style.background-image]="imageImportant">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic">{{notes.title}}</h1>
+        <p class="lead my-3">{{notes.subtitle}}</p>
+        <p class="lead mb-0"><a role="button" (click)="navigateById(notes.id)" class="text-white fw-bold">Continuar
+            leyendo...</a></p>
+      </div>
+    </div>
+  </div>
+</main>
+<div class="container">
+  <div class="grid-layout row">
+    <div *ngFor="let notes of newArrayNotes">
+      <div class="col-12 mb-5">
+        <div class="row g-0 border rounded overflow-hidden shadow-sm h-md-250 ">
+          <div class="col p-4 d-flex flex-column position-static">
+           <app-brands-label [brandLabel]="notes.brandLabel"></app-brands-label>
+            <h3 class="mb-0">{{notes.title}}</h3>
+            <div class="mb-1 text-muted">{{notes.date}}</div>
+            <p class="card-text">{{notes.subtitle}}.</p>
+            <span class='mb-3' (click)="navigateById(notes.id)">
+              <a role="button" class="readMore">Continuar leyendo</a>
+            </span>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img [src]="notes.image" class="imageNotes" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

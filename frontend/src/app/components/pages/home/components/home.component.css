@@ -1,0 +1,40 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Cookie-Regular";
+}
+
+.display-4 {
+    font-size: 15px;
+}
+
+@media (min-width: 268px) {
+    .display-4 {
+        font-size: 3rem;
+    }
+}
+
+.h-250 { height: 250px; }
+
+@media (min-width: 768px) {
+    .h-md-250 { height: 380px; }
+}
+
+.imageNotes{
+  width:300px;
+}
+
+.grid-layout{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 102%;
+}
+
+.readMore:hover{
+  color: blue;
+  background-color: #0000;
+  margin: 0px solid #0000
+}

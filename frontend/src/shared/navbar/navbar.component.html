@@ -1,0 +1,41 @@
+<div class="container-navbar" #main>
+    <span class="openbtn text-dark" (click)="openNav()">
+        <i [hidden]="openSidenav" class="fa fa-bars"></i>
+    </span>
+</div>
+<div class="sidenav" #sidenav>
+    <a class="closebtn" (click)="closeNav()">
+        <i class="fa fa-times"></i>
+    </a>
+    <a href="/"><i class="fa-sharp fa-solid fa-house"></i> Menú</a>
+    <a href="/historia-de-vendimia"><i class="fa-sharp fa-solid fa-book"></i> Historia de Vendimia</a>
+    <a href="/nosotros"><i class="fa-sharp fa-solid fa-circle-info"></i> Nosotros</a>
+    <a href="/reinas"><i class="fa-sharp fa-solid fa-crown"></i> Reinas</a>
+    <a href="/acto-central"><i class="fa-solid fa-newspaper"></i> Acto Central</a>
+    <a class="dropdown-toggle" href="#" id="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-globe"></i> Vendimia departamental</a>
+        <ul class="dropdown-menu" aria-labelledby="dropdown-toggle" >
+            <ng-container *ngFor="let data of routesVendimia">
+                <li>
+                    <a class="dropdown-item" (click)="navigate(data.route)">
+                        <i class="fa-solid fa-location-dot"></i> {{data.title}}
+                    </a>
+                </li>
+            </ng-container>
+        </ul>
+    <a *ngIf="!notAuthenticated" href="/notes/new"><i class="fa-sharp fa-solid fa-plus"></i> Nueva nota</a>
+    <a *ngIf="notAuthenticated" href="/login"><i class="fa-sharp fa-solid fa-user"></i> Iniciar sesión</a>
+    <div class=" perfil btn-group dropup" *ngIf="!notAuthenticated">
+        <div *ngIf="auth.user$ | async as user">
+            <a href="#" class="text-white dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img [src]="user.picture" alt="" width="32" height="32" class="rounded-circle me-2">
+                {{user.name}}
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item " href="/profile">Perfil</a></li>
+                <li><a class="dropdown-item" role="button" (click)="logout()" >Cerrar sesión</a></li>
+            </ul>
+        </div>
+    </div>
+    <img src="./../../../../assets/logoWhite.ico" alt="LogoPagina" class="logo-navbar">
+   
+</div>

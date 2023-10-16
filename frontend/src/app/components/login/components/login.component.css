@@ -1,0 +1,21 @@
+
+.image {
+  width: 75px;
+  padding-bottom: 15px;
+  align-items: center;
+  display: flex;
+
+}
+.buttonLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+}

@@ -1,0 +1,16 @@
+.space{
+    display: inline;
+    flex: 1 1 auto;
+}
+
+.dateAndBrand{
+    background-color: rgb(157, 94, 216,0.5);
+    padding: 0px 15px 0px 15px;
+    display: flex;
+    margin-bottom: 18px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.sizeNote{
+    margin: 20px 100px 0px 100px;
+}

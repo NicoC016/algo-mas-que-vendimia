@@ -1,0 +1,15 @@
+.infoCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.card{
+    background-color: silver;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card img{
+    margin-top: 15px;
+}

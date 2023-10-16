@@ -1,0 +1,59 @@
+<span [ngSwitch]="brandLabel">
+    <p *ngSwitchCase="'Maipú'">
+      <strong class="d-inline-block mb-2 text-info">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'General Alvear'">
+      <strong class="genericColor d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'San Carlos'">
+      <strong class="colorSanCarlos d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'San Rafael'">
+      <strong class="colorSanRafael d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'Tupungato'">
+      <strong class="genericColor d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'Malargüe'">
+      <strong class="colorMalargue d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'Tunuyán'">
+      <strong class="d-inline-block mb-2 text-primary">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'Santa Rosa'">
+      <strong class="colorSantaRosa d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'La Paz'">
+      <strong class="colorLaPaz d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'Capital'">
+      <strong class="genericColor d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'Las Heras'">
+      <strong class="d-inline-block mb-2 text-danger">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'Lavalle'">
+      <strong class="colorLavalle d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'Junín'">
+      <strong class="d-inline-block mb-2 text-success">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'Rivadavia'">
+      <strong class="colorRivadavia d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'San Martín'">
+      <strong class="d-inline-block mb-2 text-info">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'Guaymallén'">
+      <strong class="colorGuaymallen d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'Godoy Cruz'">
+      <strong class="colorGodoyCruz d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchCase="'Luján'">
+      <strong class="d-inline-block mb-2 text-danger">{{brandLabel}}</strong>
+    </p>
+    <p *ngSwitchDefault>
+      <strong class="genericColor d-inline-block mb-2">{{brandLabel}}</strong>
+    </p>
+  </span>
