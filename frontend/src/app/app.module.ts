@@ -6,8 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesModule } from './components/pages.module';
 import { NotesService } from './components/pages/notes/services/service-notes.service';
-import { ReactiveFormsModule } from '@angular/forms';
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { AuthModule } from '@auth0/auth0-angular';
 import { HomeModule } from './components/pages/home/home.module';
 import { SharedModule } from 'src/shared/shared.module';

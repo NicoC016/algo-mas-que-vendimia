@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+.navbar-main{
+    position: fixed;
+    top: -3px;
+}
+.main-router{
+    margin-top: 55px;
+}

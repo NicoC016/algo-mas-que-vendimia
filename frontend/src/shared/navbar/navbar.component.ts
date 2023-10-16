@@ -32,28 +32,28 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   openNav() {
     this.openSidenav = true;
     if(this.sidenav !== null && this.main !== null) {
-      this.main.nativeElement.style.paddingLeft = '300px'
-      this.sidenav.nativeElement.style.width = '290px'
+      this.main.nativeElement.style.paddingLeft = '300px';
+      this.sidenav.nativeElement.style.width = '290px';
     }
   }
 
   closeNav() {
     this.openSidenav = false;
     if(this.sidenav !== null && this.main !== null) {
-      this.main.nativeElement.style.paddingLeft = '15px'
-      this.sidenav.nativeElement.style.width = '0px';
+      this.main.nativeElement.style.paddingLeft = '15px';
+      this.sidenav.nativeElement.style.width = '0px';;
     };
   }
 
   logout() {
-    this.auth.logout();
+    return this.auth.logout();
   }
   isAuthenticated(){
     this.auth.isAuthenticated$.subscribe(isAuthenticated=>{
       if(!isAuthenticated){
-        this.notAuthenticated = true
+        return this.notAuthenticated = true
       }else{
-        this.notAuthenticated = false
+        return this.notAuthenticated = false
       }
     })
   }
